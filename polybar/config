@@ -33,6 +33,8 @@ height = 3%
 offset-x = 1%
 offset-y = 0.7%
 
+enable-ipc = true
+
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -47,7 +49,6 @@ module-margin-right = 1
 font-0 = roboto:pixelsize=10;1
 font-1 = wuncon siji:pixelsize=10;1
 ;font-2 = agave nerd font:antialias=true;size=10;3
-
 
 tray-position = center
 tray-detached = false
