@@ -48,13 +48,19 @@ font-0 = roboto:pixelsize=10;1
 font-1 = wuncon siji:pixelsize=10;1
 ;font-2 = agave nerd font:antialias=true;size=10;3
 
-#tray-position = right
-#tray-padding = 10
-#tray-background = ${colors.background}
-#tray-offset-x =
+
+tray-position = center
+tray-detached = false
+tray-maxsize = 14
+tray-background = ${root.background}
+
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
 
 modules-left = ewmh 
-;modules-center = mpd
+#modules-center = mpd
 modules-right = wlan eth separator volume separator battery separator temperature separator date
 
 monitor-strict = false
