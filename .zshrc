@@ -3,7 +3,7 @@
 # / /__/ /_/ / /__/ // / _  / __ |/    / // /\ \  
 # \___/\____/____/____/_//_/_/ |_/_/|_/____/___/ 
 # coldhands.xyz
-# zsh config
+# 2021
  
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -80,7 +80,7 @@ if [ -d "$HOME/.scripts" ] ;
  then PATH="$HOME/.scripts:$PATH"
 fi
 
-# ALIASES #
+## ALIASES ##
 
 # Cd but no cd
 alias ..='cd ..'
@@ -92,13 +92,6 @@ alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
-
-# List Stuff
-#alias ls='ls --color=auto'
-#alias la='ls -a'
-#alias ll='ls -la'
-#alias l='ls'
-#alias l.="ls -A | egrep '^\.'"
 
 # Colorize the grep command output
 alias grep='grep --color=auto'
@@ -115,7 +108,6 @@ alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
 
 # Yay
-alias pksyua='yay -Syu --noconfirm'
 alias upall='yay -Syu --noconfirm'
 
 # Add new fonts
@@ -125,9 +117,6 @@ alias fonts='sudo fc-cache -fv'
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
-# Hardware info --short
-alias hw='hwinfo --short'
-
 # Get fastest mirrors
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
@@ -136,28 +125,6 @@ alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pac
 
 # Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
-
-# Get top process eating memory
-alias psmem='ps auxf | sort -nr -k 4'
-alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-
-# Get top process eating cpu 
-alias pscpu='ps auxf | sort -nr -k 3'
-alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
-
-# Git shit
-alias addup='git add -u'
-alias addall='git add .'
-alias branch='git branch'
-alias checkout='git checkout'
-alias clone='git clone'
-alias commit='git commit -m'
-alias fetch='git fetch'
-alias pull='git pull origin'
-alias push='git push origin'
-alias status='git status'
-alias tag='git tag'
-alias newtag='git tag -a'
 
 # Get error messages from journalctl
 alias jctl='journalctl -p 3 -xb'
@@ -182,3 +149,5 @@ neofetch
 
 # Git bare 
 alias config="/usr/bin/git --git-dir=/home/cold/.dotfiles/ --work-tree=/home/cold"
+
+# END OF LINE
