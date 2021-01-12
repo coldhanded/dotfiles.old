@@ -40,8 +40,8 @@ super + f
     thunar
 
 #Dmenu
-#super + r
-#    /home/cold/.scripts/dmenu.sh
+super + d
+    /home/cold/.scripts/dmenu.sh
 
 #Rofi 
 super + r
@@ -53,7 +53,7 @@ XF86LaunchA
 
 #Kitty
 super + t
-    kitty
+    urxvt
 
 #Kitty
 super + Return
