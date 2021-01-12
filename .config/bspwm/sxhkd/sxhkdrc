@@ -1,13 +1,16 @@
-#   _________  __   ___  __ _____   _  _____  ____
-#  / ___/ __ \/ /  / _ \/ // / _ | / |/ / _ \/ __/
-# / /__/ /_/ / /__/ // / _  / __ |/    / // /\ \  
-# \___/\____/____/____/_//_/_/ |_/_/|_/____/___/ 
+#################################################################
+# Cold Hands SXHKD Config 2021
 # coldhands.xyz
-# 2021
+#################################################################
 
 #################################################################
 # SUPER + KEYS
 #################################################################
+
+
+# Toggle pseudo tiling of window
+super + p
+	bspc node --state \~pseudo_tiled
 
 # Kill
 super + q
@@ -85,13 +88,11 @@ super + F10
 XF86Search
 	catfish
 
-# Wallpaper pywal script
-super + shift + w
-	$HOME/.scripts/wallpaper.sh
 
-# Hide polybar
-super + shift + p
-	polybar-msg cmd toggle
+#################################################################
+# CONTROL + SHIFT KEYS
+#################################################################
+
 
 
 #################################################################
@@ -127,6 +128,14 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     xbacklight -dec 10
 
+#########################
+#        POLYBAR        #
+#########################
+
+# Hide polybar
+super + y
+    polybar-msg cmd toggle
+
 
 #################################################################
 # SUPER + ALT KEYS
@@ -148,14 +157,21 @@ super + ctrl + {Left,Down,Up,Right}
 super + ctrl + {h,j,k,l}
 	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
 
+# Focus parent/brother/first/second for preselection
+super + ctrl + {e,r,t,y}
+	bspc node --focus @{parent,brother,first,second}
+
+# Preselect the splitting area for next window on leaf/parent
+super + ctrl + {u,i,o,p}
+	bspc node --presel-dir \~{west,south,north,east}
+
+# Define splitting ratio for next window on leaf/parent
+super + ctrl + {_,shift +}{1-9}
+	bspc node {_,@/} --presel-ratio 0.{1-9}
 
 #################################################################
 # SUPER + SHIFT KEYS
 #################################################################
-
-# Focus/swap windows by direction
-super + {_,shift + }{Left,Down,Up,Right}
-	bspc node --{focus,swap} {west,south,north,east}
 
 # Picom Toggle
 super + shift + p
@@ -193,4 +209,5 @@ super + shift + {1-9,0}
 super + shift + {h,j,k,l}
 	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
-# END OF LINE
+
+#################################################################
