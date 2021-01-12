@@ -37,7 +37,7 @@ module-margin-right = 1
 #font-0 = tewi:pixelsize=10;1
 font-0 = roboto:pixelsize=10;1
 font-1 = wuncon siji:pixelsize=10;1
-;font-2 = agave nerd font:antialias=true;size=10;3
+font-2 = fontawesome:size=10;1
 
 tray-position = right
 tray-detached = true

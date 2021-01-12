@@ -6,8 +6,8 @@
 # 2021
 
 Xft.dpi: 96
-URxvt.font: xft:JetBrains Mono Medium:size=10
-URxvt.boldFont: xft:JetBrains Mono Medium:size=10
+URxvt.font: xft:FuraMono Nerd Font Mono Regular:size=10
+URxvt.boldFont: xft:FuraMono Nerd Font Mono Regular:size=10
 URxvt.scrollBar: false
 URxvt.perl-ext-common:resize-font
 URxvt.keysym.C-minus:resize-font:smaller
