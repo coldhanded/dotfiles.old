@@ -1,3 +1,3 @@
 # dotfiles
 
-.dotfiles for my Thinkpad T440s
+dots for my Thinkpad T440s
