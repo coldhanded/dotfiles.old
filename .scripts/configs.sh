@@ -2,14 +2,14 @@
 
 
 
-declare options=("bash
+declare options=("zsh
 bspwm
 picom
 polybar
 sxhkd
-termite
+kitty
 xresources
-zsh
+autostart
 quit")
 
 . "${HOME}/.cache/wal/colors.sh"
@@ -19,34 +19,33 @@ case "$choice" in
 	quit)
 		echo "Program terminated." && exit 1
 	;;
-	bash)
-		choice="$HOME/.bashrc"
+	zsh)
+		choice="$HOME/.zshrc"
 	;;
 	bspwm)
 		choice="$HOME/.config/bspwm/bspwmrc"
 	;;
 	picom)
-		choice="$HOME/.config/picom/picom.conf"
+		choice="$HOME/.config/bspwm/picom.conf"
 	;;
 	polybar)
-		choice="$HOME/polybar/config"
+		choice="$HOME/.config/polybar/config"
 	;;
 	sxhkd)
-		choice="$HOME/.config/sxhkd/sxhkdrc"
+		choice="$HOME/.config/bspwm/sxhkd/sxhkdrc"
 	;;
-	termite)
-		choice="$HOME/.config/termite/config"
+	kitty)
+		choice="$HOME/.config/kitty/kitty.conf"
 	;;
 	xresources)
 		choice="$HOME/.Xresources"
 	;;
-	zsh)
-		choice="$HOME/.zshrc"
+	autostart)
+		choice="$HOME/.config/bspwm/autostart.sh"
 	;;
 	*)
 		exit 1
 	;;
 esac
  subl3 "$choice"
-# termite -e nano "$choice"
-# emacsclient -c -a emacs "$choice"
+# kitty -e nano "$choice"
