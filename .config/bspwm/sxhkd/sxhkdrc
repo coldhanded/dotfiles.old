@@ -55,9 +55,9 @@ XF86LaunchA
 super + t
     kitty
 
-#Termite
+#Kitty
 super + Return
-    termite    
+    kitty    
 
 #Spotify
 super + m
@@ -86,9 +86,6 @@ super + F10
 #Catfish search (thinkpad)
 XF86Search
 	catfish
-
-
-## Control + Shift Keys ##
 
 
 ## Screenshots

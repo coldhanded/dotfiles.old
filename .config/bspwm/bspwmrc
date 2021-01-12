@@ -61,7 +61,7 @@ bspc rule -a discord desktop='IV'
 #bspc rule -a Spotify desktop='V' follow=on
 
 ##Polybar hidden when fullscreen for vlc, youtube, mpv ...
-xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_eDP1)
+xdo below -t $(xdo id -n root) $(xdo id -a polybar-simple_eDP1)
 
 ##External rules
 ##Pseudo automatic mode: always splits focused window when opening new window

@@ -115,4 +115,15 @@ neofetch
 # Git bare 
 alias config="/usr/bin/git --git-dir=/home/cold/.dotfiles/ --work-tree=/home/cold"
 
+# Coldbot ssh
+alias coldbot="ssh 192.168.2.51 -l coldbot"
+
+# Images in kitty
+alias icat="kitty +kitten icat"
+
+# Kitty completion
+autoload -Uz compinit
+compinit
+kitty + complete setup zsh | source /dev/stdin
+
 ## END OF LINE ##
