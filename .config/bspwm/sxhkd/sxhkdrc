@@ -5,7 +5,7 @@
 # coldhands.xyz
 # 2021
 
-## Super + Keys
+## Super + Keys ##
 
 #Toggle pseudo tiling of window
 super + p
@@ -88,7 +88,7 @@ XF86Search
 	catfish
 
 
-## Control + Shift Keys
+## Control + Shift Keys ##
 
 
 ## Screenshots
@@ -128,7 +128,7 @@ super + y
     polybar-msg cmd toggle
 
 
-## Super + Alt keys
+## Super + Alt keys ##
 
 # Move floating window
 super + alt + {_,shift + }{Left,Down,Up,Right}
@@ -157,7 +157,7 @@ super + ctrl + {_,shift +}{1-9}
 	bspc node {_,@/} --presel-ratio 0.{1-9}
 
 
-# Super + Shift keys
+# Super + Shift keys ##
 
 #Picom Toggle
 super + shift + p
@@ -194,6 +194,11 @@ super + shift + {1-9,0}
 #Expand tiled space
 super + shift + {h,j,k,l}
 	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+
+
+# Wallpaper Script
+super + shift + w
+	~/.scripts/wallpaper.sh
 
 
 ## END OF LINE##

@@ -1,11 +1,10 @@
+#!/bin/sh
 #   _________  __   ___  __ _____   _  _____  ____
 #  / ___/ __ \/ /  / _ \/ // / _ | / |/ / _ \/ __/
 # / /__/ /_/ / /__/ // / _  / __ |/    / // /\ \  
 # \___/\____/____/____/_//_/_/ |_/_/|_/____/___/ 
 # coldhands.xyz
 # 2021
-
-#!/bin/sh
 
 ##Autostart
 $HOME/.config/bspwm/autostart.sh
@@ -44,7 +43,7 @@ bspc config presel_feedback_color	"#5e81ac"
 bspc monitor -d I II III IV V
 
 ##Fullscreen applications
-bspc rule -a mpv state=fullscreen
+bspc rule -a Retroarch state=fullscreen
 
 ##Floating applications
 bspc rule -a feh state=floating center=true
@@ -52,11 +51,12 @@ bspc rule -a Galculator state=floating center=true
 bspc rule -a Gpick state=floating sticky=on
 bspc rule -a Oblogout state=floating center=true
 bspc rule -a Pavucontrol state=floating center=true
+bspc rule -a Bitwarden state=floating sticky=on
 
 ##Open applications on specific workspaces
 #bspc rule -a Subl3 desktop='II'
 bspc rule -a Steam desktop='V'
-bspc rule -a mpv desktop='V'
+bspc rule -a Io.github.celluloid_player.Celluloid desktop='V'
 bspc rule -a discord desktop='IV'
 #bspc rule -a Spotify desktop='V' follow=on
 
