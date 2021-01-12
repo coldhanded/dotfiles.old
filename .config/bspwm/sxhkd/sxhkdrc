@@ -1,213 +1,199 @@
-#################################################################
-# Cold Hands SXHKD Config 2021
+#   _________  __   ___  __ _____   _  _____  ____
+#  / ___/ __ \/ /  / _ \/ // / _ | / |/ / _ \/ __/
+# / /__/ /_/ / /__/ // / _  / __ |/    / // /\ \  
+# \___/\____/____/____/_//_/_/ |_/_/|_/____/___/ 
 # coldhands.xyz
-#################################################################
+# 2021
 
-#################################################################
-# SUPER + KEYS
-#################################################################
+## Super + Keys
 
-
-# Toggle pseudo tiling of window
+#Toggle pseudo tiling of window
 super + p
 	bspc node --state \~pseudo_tiled
 
-# Kill
+#Kill
 super + q
 	bspc node -c
 
-# Focus selected desktop
+#Focus selected desktop
 super + Tab
 	bspc desktop -f '^{1-9,10}'
 
-# Increase/decrease window gap on focused desktop
+#Increase/decrease window gap on focused desktop
 super + bracket{left,right}
 	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
-# Set the window state
+#Set the window state
 super + space
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# Set the windows state (thinkpad)
+#Set the windows state (thinkpad)
 XF86Explorer
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# Brave Browser
+#Brave Browser
 super + w
 	brave
 
-# Thunar File Manager
+#Thunar File Manager
 super + f
     thunar
 
-# Dmenu
+#Dmenu
 #super + r
 #    /home/cold/.scripts/dmenu.sh
 
-# Rofi 
+#Rofi 
 super + r
  	rofi -show run
 
-# Rofi (thinkpad)
+#Rofi (thinkpad)
 XF86LaunchA
 	rofi -show run
 
-# Kitty
+#Kitty
 super + t
     kitty
 
-# Termite
+#Termite
 super + Return
     termite    
 
-# Spotify
+#Spotify
 super + m
     spotify
 
-# Logout Script
+#Logout Script
 super + x
     arcolinux-logout
 
-# Volume Control
+#Volume Control
 super + v
     pavucontrol
 
-# Xkill
+#Xkill
 super + Escape
     xkill
 
-# Reload sxhkd
+#Reload sxhkd
 super + shift + s
 	pkill -USR1 -x sxhkd
 
-# Catfish search
+#Catfish search
 super + F10
     catfish
 
-# Catfish search (thinkpad)
+#Catfish search (thinkpad)
 XF86Search
 	catfish
 
 
-#################################################################
-# CONTROL + SHIFT KEYS
-#################################################################
+## Control + Shift Keys
 
 
-
-#################################################################
-#     SCREENSHOTS
-#################################################################
+## Screenshots
 
 # Scrot
 Print
     scrot 'cold-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
 
 
-#################################################################
-#     MULTIMEDIA KEYS
-#################################################################
+## Multimedia Keys
 
-# Raise volume
+#Raise volume
 XF86AudioRaiseVolume
     amixer set Master 10%+
 
-# Lower volume
+#Lower volume
 XF86AudioLowerVolume
     amixer set Master 10%-
 
-# Mute
+#Mute
 XF86AudioMute
     amixer -D pulse set Master 1+ toggle
 
-# Brightness up
+#Brightness up
 XF86MonBrightnessUp
     xbacklight -inc 10
 
-# Brightness down
+#Brightness down
 XF86MonBrightnessDown
     xbacklight -dec 10
 
-#########################
-#        POLYBAR        #
-#########################
+
+## Polybar
 
 # Hide polybar
 super + y
     polybar-msg cmd toggle
 
 
-#################################################################
-# SUPER + ALT KEYS
-#################################################################
+## Super + Alt keys
 
 # Move floating window
 super + alt + {_,shift + }{Left,Down,Up,Right}
 	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
 
-#################################################################
-# SUPER + CONTROL KEYS
-#################################################################
+## Super + Control keys
 
-# Focus/swap windows by direction
+#Focus/swap windows by direction
 super + ctrl + {Left,Down,Up,Right}
 	bspc node --{focus} {west,south,north,east}
 
-# Contract tiled space
+#Contract tiled space
 super + ctrl + {h,j,k,l}
 	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
 
-# Focus parent/brother/first/second for preselection
+#Focus parent/brother/first/second for preselection
 super + ctrl + {e,r,t,y}
 	bspc node --focus @{parent,brother,first,second}
 
-# Preselect the splitting area for next window on leaf/parent
+#Preselect the splitting area for next window on leaf/parent
 super + ctrl + {u,i,o,p}
 	bspc node --presel-dir \~{west,south,north,east}
 
-# Define splitting ratio for next window on leaf/parent
+#Define splitting ratio for next window on leaf/parent
 super + ctrl + {_,shift +}{1-9}
 	bspc node {_,@/} --presel-ratio 0.{1-9}
 
-#################################################################
-# SUPER + SHIFT KEYS
-#################################################################
 
-# Picom Toggle
+# Super + Shift keys
+
+#Picom Toggle
 super + shift + p
     ~/.config/bspwm/scripts/picom-toggle.sh
 
-# Toggle fullscreen of window
+#Toggle fullscreen of window
 super + shift + f
 	bspc node --state \~fullscreen
 
-# Reload bspwm
+#Reload bspwm
 super + shift + r
 	~/.config/bspwm/bspwmrc
 
-# Kill
+#Kill
 super + shift + q
 	bspc node -c
 
-# Logout
+#Logout
 super + shift + x
 	bspc quit
 
-# Flip layout vertically/horizontally
+#Flip layout vertically/horizontally
 super + {_,shift + }a
 	bspc node @/ --flip {vertical,horizontal}
 
-# Focus selected desktop
+#Focus selected desktop
 super + {1-9,0}
 	bspc desktop -f '^{1-9,10}'
 
-# Move window to selected desktop
+#Move window to selected desktop
 super + shift + {1-9,0}
     id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
 
-# Expand tiled space
+#Expand tiled space
 super + shift + {h,j,k,l}
 	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
 
-#################################################################
+## END OF LINE##

@@ -150,4 +150,4 @@ neofetch
 # Git bare 
 alias config="/usr/bin/git --git-dir=/home/cold/.dotfiles/ --work-tree=/home/cold"
 
-# END OF LINE
+## END OF LINE ##
