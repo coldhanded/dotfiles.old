@@ -13,8 +13,8 @@ function run {
   fi
 }
 
-#$HOME/.config/polybar/launch.sh &
-$HOME/polybar/launch.sh &
+$HOME/.config/polybar/launch.sh &
+#$HOME/polybar/launch.sh &
 
 xsetroot -cursor_name left_ptr &
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
@@ -24,5 +24,6 @@ picom --config $HOME/.config/bspwm/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 run dropbox &
 run discord &
-run dunst &
+#run dunst &
 wal -R &
+$HOME/.scripts/reload_dunst.sh &
