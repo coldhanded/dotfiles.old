@@ -58,16 +58,9 @@ bspc rule -a Bitwarden state=floating sticky=on
 bspc rule -a Steam desktop='V'
 bspc rule -a Io.github.celluloid_player.Celluloid desktop='V'
 bspc rule -a discord desktop='IV'
-#bspc rule -a Spotify desktop='V' follow=on
 
 ##Polybar hidden when fullscreen for vlc, youtube, mpv ...
 xdo below -t $(xdo id -n root) $(xdo id -a polybar-simple_eDP1)
-
-##External rules
-##Pseudo automatic mode: always splits focused window when opening new window
-#bspc config external_rules_command ~/.config/bspwm/scripts/pseudo_automatic_mode
-##Adjust new window: splits biggest windows to keep windows about the same size
-#bspc config external_rules_command ~/.config/bspwm/scripts/adjust-new-window
 
 ##Pywal
 #source the colors.

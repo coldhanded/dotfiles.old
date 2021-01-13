@@ -14,16 +14,12 @@ function run {
 }
 
 $HOME/.config/polybar/launch.sh &
-#$HOME/polybar/launch.sh &
 
 xsetroot -cursor_name left_ptr &
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
-numlockx on &
 blueberry-tray &
-picom --config $HOME/.config/bspwm/picom.conf &
+picom --config $HOME/.config/picom/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-run dropbox &
-run discord &
-#run dunst &
+sleep 5 && run dropbox &
 wal -R &
 $HOME/.scripts/reload_dunst.sh &

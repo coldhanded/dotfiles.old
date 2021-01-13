@@ -104,7 +104,7 @@ alias configs='configs.sh'
 
 # Neofetch
 #neofetch --w3m /home/cold/Pictures/cold.png
-neofetch
+neofetch --ascii /home/cold/.config/neofetch/kitty
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

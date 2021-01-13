@@ -24,6 +24,7 @@ offset-y = 0.7%
 
 enable-ipc = true
 
+wm-restack = bspwm
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -43,13 +44,13 @@ tray-position = right
 tray-detached = true
 tray-maxsize = 14
 tray-background = ${root.background}
-tray-offset-x = -340
+tray-offset-x = -335
 tray-offset-y = 0
 tray-padding = 0
 tray-scale = 1.0
 
 modules-left = ewmh 
-#modules-center = mpd
+modules-center = spotify
 modules-right = wlan eth separator volume separator battery separator temperature separator date
 
 monitor-strict = false
@@ -61,7 +62,7 @@ cursor-scroll = ns-resize
 [module/separator]
 type = custom/text
 #content = x 
-content = |
+content = "·"
 content-foreground = ${colors.cross}
 content-padding = 1
 
@@ -298,3 +299,30 @@ label-empty-foreground = ${colors.foreground}
 label-empty-padding = 2
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+
+[module/spotify]
+type = custom/script
+tail = true
+; prefix symbol is shown before the text
+format-prefix = "  "
+format = <label>
+exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
+
+[module/spotify-prev]
+type = custom/script
+exec = echo ""
+format = <label>
+click-left = playerctl previous spotify
+
+[module/spotify-play-pause]
+type = custom/ipc
+hook-0 = echo ""
+hook-1 = echo ""
+initial = 1
+click-left = playerctl play-pause spotify
+
+[module/spotify-next]
+type = custom/script
+exec = echo " "
+format = <label>
+click-left = playerctl next spotify
