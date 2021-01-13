@@ -92,7 +92,7 @@ XF86Search
 
 # Scrot
 Print
-    scrot 'cold-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+	/home/cold/.scripts/dmenu-scrot.sh
 
 
 ## Multimedia Keys
