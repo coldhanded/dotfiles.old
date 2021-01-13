@@ -51,7 +51,7 @@ super + r
 XF86LaunchA
 	rofi -show run
 
-#Kitty
+#Urxvt
 super + t
     urxvt
 
@@ -127,9 +127,13 @@ super + y
 
 ## Super + Alt keys ##
 
-# Move floating window
-super + alt + {_,shift + }{Left,Down,Up,Right}
-	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
+#Move floating window
+super + alt + {Left,Down,Up,Right}
+    ~/.config/bspwm/scripts/move-window {west,south,north,east}
+
+#Resize floating window
+super + alt + ctrl + {Left,Down,Up,Right}
+	~/.config/bspwm/scripts/resize-window {west,south,north,east}
 
 ## Super + Control keys
 

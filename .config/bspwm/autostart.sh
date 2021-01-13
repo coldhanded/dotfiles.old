@@ -19,7 +19,6 @@ xsetroot -cursor_name left_ptr &
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 blueberry-tray &
 picom --config $HOME/.config/picom/picom.conf &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-sleep 5 && run dropbox &
+run dropbox &
 wal -R &
 $HOME/.scripts/reload_dunst.sh &
