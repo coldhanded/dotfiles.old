@@ -31,6 +31,7 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors true
+bspc config external_rules_command "$HOME/.scripts/bspwm_rules.sh"
 
 ##Bspwm coloring
 bspc config normal_border_color		"#4c566a"
@@ -40,24 +41,20 @@ bspc config presel_feedback_color	"#5e81ac"
 #bspc config urgent_border_color 	"#dd2727"
 
 ##Desktop names
-bspc monitor -d I II III IV V
+bspc monitor -d I II III IV
 
 ##Fullscreen applications
 bspc rule -a Retroarch state=fullscreen
 
 ##Floating applications
 bspc rule -a feh state=floating center=true
-bspc rule -a Galculator state=floating center=true
 bspc rule -a Gpick state=floating sticky=on
-bspc rule -a Oblogout state=floating center=true
-bspc rule -a Pavucontrol state=floating center=true
 bspc rule -a Bitwarden state=floating sticky=on
 
 ##Open applications on specific workspaces
-#bspc rule -a Subl3 desktop='II'
-bspc rule -a Steam desktop='V'
-bspc rule -a Io.github.celluloid_player.Celluloid desktop='V'
-bspc rule -a discord desktop='IV'
+bspc rule -a Steam desktop='IV'
+bspc rule -a Io.github.celluloid_player.Celluloid desktop='IV'
+bspc rule -a discord desktop='III'
 
 ##Polybar hidden when fullscreen for vlc, youtube, mpv ...
 xdo below -t $(xdo id -n root) $(xdo id -a polybar-simple_eDP1)

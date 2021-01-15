@@ -33,6 +33,6 @@ then
   notify-send -u low 'picom' "Blur Disabled"
 else
   polybar-msg hook blur-toggle 2
-  picom -b --config=/home/cold/.config/bspwm/picom.conf --experimental-backends --backend glx --blur-method dual_kawase &
+  picom -b --config=/home/cold/.config/picom/picom.conf --experimental-backends --backend glx --blur-method dual_kawase &
   notify-send -u low 'picom' "Blur Enabled"
 fi

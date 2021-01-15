@@ -35,10 +35,9 @@ padding-right = 3%
 module-margin-left = 1
 module-margin-right = 1
 
-#font-0 = tewi:pixelsize=10;1
-font-0 = roboto:pixelsize=10;1
-font-1 = wuncon siji:pixelsize=10;1
-font-2 = fontawesome:size=10;1
+font-0 = sf pro display:size=10;1
+font-1 = wuncon siji:size=10;1
+font-2 = cozette:size=14;1
 
 tray-position = right
 tray-detached = true
@@ -49,7 +48,7 @@ tray-offset-y = 0
 tray-padding = 0
 tray-scale = 1.0
 
-modules-left = ewmh 
+modules-left = bspwm
 modules-center = spotify
 modules-right = wlan eth separator volume separator battery separator temperature separator date
 
@@ -98,11 +97,11 @@ label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 3
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-;ws-icon-4 = 5;
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+#ws-icon-4 = V;
 
 
 [module/mpd]
@@ -268,33 +267,33 @@ enable-click = false
 ; Default: true
 enable-scroll = false
 
-icon-0 = 1;
-icon-1 = 2;
-icon-2 = 3;
-icon-3 = 4;
-icon-4 = 5;
+icon-0 = I;⠁
+icon-1 = II;⠉
+icon-2 = III;⠓
+icon-3 = IV;⠛
+icon-4 = V;⠟
 #icon-5 = 6;
-format = <label-state>
-label-monitor = %name%
+format = <label-icon>
+label-monitor = %icon%
 
-label-active = %name%
+label-active = %icon%
 label-active-foreground = ${xrdb:color1:#222}
 label-active-background = ${colors.background}
 label-active-underline= #6790eb
 label-active-padding = 2
 
-label-occupied = %name%
+label-occupied = %icon%
 label-occupied-background = ${colors.background}
 label-occupied-padding = 2
 
-label-urgent = %name%
+label-urgent = %icon%
 label-urgent-foreground = ${colors.foreground}
 label-urgent-background = ${colors.alert}
 label-urgent-underline = ${colors.alert}
 label-urgent-padding = 2
 
 
-label-empty = %name%
+label-empty = %icon%
 label-empty-foreground = ${colors.foreground}
 label-empty-padding = 2
 format-foreground = ${colors.foreground}
@@ -304,7 +303,7 @@ format-background = ${colors.background}
 type = custom/script
 tail = true
 ; prefix symbol is shown before the text
-format-prefix = "  "
+format-prefix = "♫  "
 format = <label>
 exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
 
