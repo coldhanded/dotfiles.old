@@ -13,7 +13,7 @@ $HOME/.config/bspwm/autostart.sh
 #bspc config border_radius       8
 bspc config border_width         1
 bspc config window_gap           10
-bspc config top_padding          30
+bspc config top_padding          20
 bspc config bottom_padding       10
 bspc config left_padding         10
 bspc config right_padding        10
@@ -41,7 +41,7 @@ bspc config presel_feedback_color	"#5e81ac"
 #bspc config urgent_border_color 	"#dd2727"
 
 ##Desktop names
-bspc monitor -d I II III IV
+bspc monitor -d I II III IV V
 
 ##Fullscreen applications
 bspc rule -a Retroarch state=fullscreen

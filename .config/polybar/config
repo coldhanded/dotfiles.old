@@ -35,20 +35,20 @@ padding-right = 3%
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = sf pro display:size=10;1
+font-0 = sf pro display:size=10;2
 font-1 = wuncon siji:size=10;1
-font-2 = cozette:size=14;1
+font-2 = cozette:size=12;1
 
 tray-position = right
 tray-detached = true
 tray-maxsize = 14
 tray-background = ${root.background}
-tray-offset-x = -335
+tray-offset-x = -360
 tray-offset-y = 0
-tray-padding = 0
+tray-padding = 3
 tray-scale = 1.0
 
-modules-left = bspwm
+modules-left = bspwm 
 modules-center = spotify
 modules-right = wlan eth separator volume separator battery separator temperature separator date
 
@@ -61,21 +61,10 @@ cursor-scroll = ns-resize
 [module/separator]
 type = custom/text
 #content = x 
-content = "·"
+#content = "·"
+content = "✦"
 content-foreground = ${colors.cross}
 content-padding = 1
-
-[module/gweather]
-type = custom/script
-exec = Weather 10039
-tail = true
-
-format-prefix = 
-format-prefix-foreground = ${colors.foreground}
-format-foreground = ${colors.foreground-alt}
-format-prefix-padding-right = 2
-
-interval = 300
 
 [module/bspwm]
 type = internal/bspwm
@@ -101,7 +90,7 @@ ws-icon-0 = I;
 ws-icon-1 = II;
 ws-icon-2 = III;
 ws-icon-3 = IV;
-#ws-icon-4 = V;
+ws-icon-4 = V;
 
 
 [module/mpd]

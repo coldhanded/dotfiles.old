@@ -14,3 +14,4 @@ feh --bg-scale $WP_DIR/$DESK/$RAND_BG
 wal -i $WP_DIR/$DESK/$RAND_BG
 reload_dunst.sh
 spicetify update
+pywal-discord
