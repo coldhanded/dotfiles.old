@@ -88,10 +88,9 @@ label-empty-padding = 3
 
 ws-icon-0 = I;
 ws-icon-1 = II;
-ws-icon-2 = III;
+ws-icon-2 = III;
 ws-icon-3 = IV;
-ws-icon-4 = V;
-
+ws-icon-4 = V;
 
 [module/mpd]
 type = internal/mpd
@@ -292,7 +291,7 @@ format-background = ${colors.background}
 type = custom/script
 tail = true
 ; prefix symbol is shown before the text
-format-prefix = "♫  "
+format-prefix = "  "
 format = <label>
 exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
 
