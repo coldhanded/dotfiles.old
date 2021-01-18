@@ -100,8 +100,6 @@ alias merge='xrdb -merge ~/.Xresources'
 # Configs dmenu script
 alias configs='configs.sh'
 
-[[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
-
 # Neofetch
 #neofetch --w3m /home/cold/Pictures/cold.png
 neofetch --ascii /home/cold/.config/neofetch/kitty
