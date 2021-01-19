@@ -43,14 +43,14 @@ tray-position = right
 tray-detached = true
 tray-maxsize = 14
 tray-background = ${root.background}
-tray-offset-x = -375
+tray-offset-x = -350
 tray-offset-y = 0
 tray-padding = 3
 tray-scale = 1.0
 
 modules-left = bspwm
 modules-center = spotify
-modules-right = wlan eth separator volume separator battery separator temperature separator date updates
+modules-right = wlan eth separator volume separator battery separator temperature separator date
 
 monitor-strict = false
 override-redirect = false

@@ -45,7 +45,7 @@ super + d
 
 #Rofi 
 super + r
- 	rofi -show run
+ 	rofi -combi-modi window,drun,ssh -font "sf pro text 12" -show combi -icon-theme "Arc" -show-icons 
 
 #Rofi (thinkpad)
 XF86LaunchA
