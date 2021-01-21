@@ -7,9 +7,6 @@
 
 ## Super + Keys ##
 
-#Toggle pseudo tiling of window
-super + p
-	bspc node --state \~pseudo_tiled
 
 #Kill
 super + q
@@ -45,11 +42,12 @@ super + d
 
 #Rofi 
 super + r
- 	rofi -combi-modi window,drun,ssh -font "sf pro text 12" -show combi -icon-theme "Arc" -show-icons 
+ 	rofi -show run -font "sf pro text 12" 
+#rofi -combi-modi window,drun,ssh -font "sf pro text 12" -show combi -icon-theme "Arc" -show-icons 
 
 #Rofi (thinkpad)
 XF86LaunchA
-	rofi -show run
+	rofi -show run -font "sf pro text 12"
 
 #Urxvt
 super + t
@@ -121,7 +119,7 @@ XF86MonBrightnessDown
 ## Polybar
 
 # Hide polybar
-super + y
+super + p
     polybar-msg cmd toggle
 
 
