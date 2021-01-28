@@ -32,12 +32,12 @@ font-0 = sf pro display:size=10;2
 font-1 = wuncon siji:size=10;1
 font-2 = cozette:size=12;1
 
-tray-position = left
+tray-position = right
 tray-detached = true
 tray-maxsize = 14
 tray-background = ${root.background}
-tray-offset-x = 155
-tray-offset-y = 0
+tray-offset-x = -355
+tray-offset-y = 
 tray-padding = 3
 tray-scale = 1.0
 
