@@ -65,8 +65,8 @@ alias rm='rm -i'
 alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
 
-# Yay
-alias upall='yay -Syu --noconfirm'
+# Paru
+alias upall='paru'
 
 # Add new fonts
 alias fonts='sudo fc-cache -fv'
