@@ -1,18 +1,7 @@
-!#   _________  __   ___  __ _____   _  _____  ____
-!#  / ___/ __ \/ /  / _ \/ // / _ | / |/ / _ \/ __/
-!# / /__/ /_/ / /__/ // / _  / __ |/    / // /\ \  
-!# \___/\____/____/____/_//_/_/ |_/_/|_/____/___/ 
-!# coldhands.xyz
-!# 2021
-
 Xft.dpi: 96
 URxvt.font: xft:FuraMono Nerd Font Mono Regular:size=10
 URxvt.boldFont: xft:FuraMono Nerd Font Mono Regular:size=10
 URxvt.scrollBar: false
-URxvt.perl-ext-common:resize-font
-URxvt.keysym.C-minus:resize-font:smaller
-URxvt.keysym.C-equal:resize-font:bigger
-URxvt.keysym.C-0:resize-font:reset
 
 ! special
 *.foreground:   #d8dee9
