@@ -1,37 +1,30 @@
-#   _________  __   ___  __ _____   _  _____  ____
-#  / ___/ __ \/ /  / _ \/ // / _ | / |/ / _ \/ __/
-# / /__/ /_/ / /__/ // / _  / __ |/    / // /\ \  
-# \___/\____/____/____/_//_/_/ |_/_/|_/____/___/ 
-# coldhands.xyz
-# 2021
- 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+## Exports and plugins ##
+
+ # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Path to your oh-my-zsh installation.
+# Path to oh-my-zsh 
 export ZSH=/usr/share/oh-my-zsh/
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="powerlevel10k/powerlevel10k"
+# Path to dump
+export ZDOTDIR=/home/cold/.config/zsh/
+
+# History file
+HISTFILE=/home/cold/.config/zsh/.zsh_history
+
+# Load spaceship prompt
   autoload -U promptinit; promptinit
   prompt spaceship
 
 # Which plugins would you like to load?
-plugins=(git)
+plugins=(
+	git
+)
 
 source $ZSH/oh-my-zsh.sh
 
-export LANG=en_US.UTF-8
-
-# Syntax Highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-setopt GLOB_DOTS
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -100,16 +93,6 @@ alias merge='xrdb -merge ~/.Xresources'
 # Configs dmenu script
 alias configs='configs.sh'
 
-# Neofetch
-#neofetch --w3m /home/cold/Pictures/cold.png
-neofetch --ascii /home/cold/.config/neofetch/kitty
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Make pywal persist
-(cat ~/.cache/wal/sequences &)
-
 # Git bare 
 alias config="/usr/bin/git --git-dir=/home/cold/.dotfiles/ --work-tree=/home/cold"
 
@@ -119,9 +102,16 @@ alias coldbot="ssh 192.168.2.51 -l coldbot"
 # Images in kitty
 alias icat="kitty +kitten icat"
 
+# Make pywal persist
+(cat ~/.cache/wal/sequences &)
+
 # Kitty completion
-autoload -Uz compinit
+autoload -Uz compinit 
 compinit
 kitty + complete setup zsh | source /dev/stdin
 
-## END OF LINE ##
+# Neofetch
+neofetch --ascii /home/cold/.config/neofetch/kitty
+
+# Syntax Highlighting (*keep last*)
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -1,12 +1,4 @@
-#   _________  __   ___  __ _____   _  _____  ____
-#  / ___/ __ \/ /  / _ \/ // / _ | / |/ / _ \/ __/
-# / /__/ /_/ / /__/ // / _  / __ |/    / // /\ \  
-# \___/\____/____/____/_//_/_/ |_/_/|_/____/___/ 
-# coldhands.xyz
-# 2021
-
 ## Super + Keys ##
-
 
 #Kill
 super + q
@@ -86,14 +78,14 @@ XF86Search
 	catfish
 
 
-## Screenshots
+## Screenshots ##
 
 # Scrot
 Print
 	/home/cold/.scripts/dmenu-scrot.sh
 
 
-## Multimedia Keys
+## Multimedia Keys ##
 
 #Raise volume
 XF86AudioRaiseVolume
@@ -116,7 +108,7 @@ XF86MonBrightnessDown
     xbacklight -dec 10
 
 
-## Polybar
+## Polybar ##
 
 # Hide polybar
 super + p
@@ -133,7 +125,8 @@ super + alt + {Left,Down,Up,Right}
 super + alt + ctrl + {Left,Down,Up,Right}
 	~/.config/bspwm/scripts/resize-window {west,south,north,east}
 
-## Super + Control keys
+
+## Super + Control keys ##
 
 #Focus/swap windows by direction
 super + ctrl + {Left,Down,Up,Right}
@@ -156,7 +149,7 @@ super + ctrl + {_,shift +}{1-9}
 	bspc node {_,@/} --presel-ratio 0.{1-9}
 
 
-# Super + Shift keys ##
+## Super + Shift keys ##
 
 #Picom Toggle
 super + shift + p
@@ -195,9 +188,6 @@ super + shift + {h,j,k,l}
 	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
 
-# Wallpaper Script
+## Wallpaper Script ##
 super + shift + w
 	~/.scripts/wallpaper.sh
-
-
-## END OF LINE ##

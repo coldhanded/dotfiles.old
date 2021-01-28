@@ -1,7 +1,7 @@
 #!/bin/bash
 
 . "${HOME}/.cache/wal/colors.sh"
-IMG_PATH=/home/cold/Pictures/
+IMG_PATH=/home/cold/pics/screenshots/
 TIME=3000 #Miliseconds notification should remain visible
 prog="Quick
 Delayed
