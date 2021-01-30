@@ -14,3 +14,4 @@ wal -i $WP_DIR/$DESK/$RAND_BG
 reload_dunst.sh
 spicetify update
 pywal-discord
+pywal_sublime.py
