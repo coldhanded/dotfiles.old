@@ -1,6 +1,6 @@
 Xft.dpi: 96
-URxvt.font: xft:FuraMono Nerd Font Mono Regular:size=10
-URxvt.boldFont: xft:FuraMono Nerd Font Mono Regular:size=10
+URxvt.font: xft:Terminess TTF Nerd Font Mono:size=10
+URxvt.boldFont: xft:Terminess TTF Nerd Font Mono:size=10
 URxvt.scrollBar: false
 
 ! special

@@ -20,11 +20,11 @@ super + space
 XF86Explorer
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-#Brave Browser
+#Brave browser
 super + w
 	brave
 
-#Thunar File Manager
+#Thunar FM
 super + f
     thunar
 
@@ -35,7 +35,6 @@ super + d
 #Rofi 
 super + r
  	rofi -show run -font "sf pro text 12" 
-#rofi -combi-modi window,drun,ssh -font "sf pro text 12" -show combi -icon-theme "Arc" -show-icons 
 
 #Rofi (thinkpad)
 XF86LaunchA
@@ -80,7 +79,7 @@ XF86Search
 
 ## Screenshots ##
 
-# Scrot
+# Scrot dmenu script
 Print
 	/home/cold/.scripts/dmenu-scrot.sh
 
@@ -151,7 +150,7 @@ super + ctrl + {_,shift +}{1-9}
 
 ## Super + Shift keys ##
 
-#Picom Toggle
+#Picom toggle
 super + shift + p
     ~/.config/bspwm/scripts/picom-toggle.sh
 
@@ -187,7 +186,6 @@ super + shift + {1-9,0}
 super + shift + {h,j,k,l}
 	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
-
-## Wallpaper Script ##
+#Wallpaper script
 super + shift + w
 	~/.scripts/wallpaper.sh
