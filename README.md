@@ -1,1 +1,1 @@
-# dotfiles
+# thinkpad dotfiles
